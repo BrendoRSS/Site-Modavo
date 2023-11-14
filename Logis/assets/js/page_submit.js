@@ -24,7 +24,6 @@ function validarNome(){
     else {
         let nome = campos[0].value
         localStorage.setItem("nome", campos[0].value)
-        console.log(nome)
         return true
     }
 }
@@ -34,7 +33,6 @@ function validarLogin() {
     if (campos[4].value.length == 6) {
         let login = campos[4].value
         localStorage.setItem("login", campos[4].value)
-        console.log(login)
         return true
     } else {
         return false
