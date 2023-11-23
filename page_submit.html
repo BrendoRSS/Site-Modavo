@@ -11,110 +11,107 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="/Site-Modavo/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
 
 
 </head>
 
 <body class="body-submit">
-    <div class="form-container">
-        <div class="form">
-            <form action="#">
-                <div class="form-header">
-                    <div class="title">
-                        <h2>Cadastre-se</h2>
-                    </div>
+    <div class="box">
+        <div class="img-box">
+            <img src="/assets/img/criancas-e-tecnologia.jpg"width="400px" alt="">
+        </div>
+        <div class="form-box">
+            <h2>Cadastre-se</h2>
+            <p>Já é um membro? <a href="page_login.html">Login</a></p>
+            <form action="">
+                <div class="input-group">
+                    <label for="name">Digite seu nome</label>
+                    <input type="name" id="name" class="input required" oninput="validarNome()"
+                        placeholder="entre 16 e 60 caracteres" pattern="^[a-zA-Z].{16,60}$" required>
                 </div>
-                <div class="box-campos">
-                    <div class="box-item">
-                        <label for="name">Digite seu nome</label>
-                        <input type="name" id="name" class="input required" oninput="validarNome()"
-                            placeholder="entre 16 e 60 caracteres" pattern="^[a-zA-Z].{16,60}$" required>
-                    </div>
-                    <div class="box-item">
-                        <label for="nascimento">Data de nascimento</label>
-                        <input type="date" id="nascimento" class="campo" required>
-                        <!-- ajustar configuração depois
+                <div class="input-group">
+                    <label for="nascimento">Data de nascimento</label>
+                    <input type="date" id="nascimento" class="campo" required>
+                    <!-- ajustar configuração depois
                 <label>Data de nascimento</label>
                         -->
-                    </div>
-                    <div class="box-item">
-                        <label for="sexo">Gênero</label>
-                        <select name="sexo" id="genero">
-                            <option value="s">Selecionar</option>
-                            <option value="m">Masculino</option>
-                            <option value="f">Feminino</option>
-                            <option value="o">Prefiro não informar</option>
-                        </select>
-                    </div>
-                    <div class="box-item">
-                        <label for="name_m">Nome materno</label>
-                        <input type="name" id="name_m" required>
-                    </div>
-                    <div class="box-item">
-                        <label for="tel_cel">Telefone Celular</label>
-                        <input type="tel" class="input required" id="tel_cel" placeholder="(xx) xxxxx-xxxx" required>
-                    </div>
-                    <div class="box-item">
-                        <label for="tel_fixo">Telefone Fixo</label>
-                        <input type="tel" id="tel_fixo" placeholder="(xx) xxxx-xxxx" class="input required" required>
-
-                    </div>
-                    <div class="box-item">
-                        <label for="txtCEP">Código postal</label>
-                        <input id="txtCEP" class="input required" oninput="buscaCep()" required>
-                    </div>
-                    <div class="box-item">
-                        <label for="txtRua">Rua</label>
-                        <input id="txtRua" required>
-
-                    </div>
-                    <div class="box-item">
-                        <label for="txtNum">Número</label>
-                        <input id="txtNum" required>
-
-                    </div>
-                    <div class="box-item">
-                        <label for="txtBairro">Bairro</label>
-                        <input id="txtBairro" required>
-
-                    </div>
-                    <div class="box-item">
-                        <label for="txtCidade">Cidade</label>
-                        <input id="txtCidade" required>
-
-                    </div>
-                    <div class="box-item">
-                        <label for="txtEstado">Estado</label>
-                        <input id="txtEstado" required>
-                    </div>
-                    <div class="box-item">
-                        <label for="login">Digite seu login</label>
-                        <input type="text" id="login" class="input required" pattern="^[a-zA-Z]{6}$"
-                            oninput="validarLogin()" required>
-                    </div>
-                    <div class="box-item">
-                        <label for="senha">Digite sua senha</label>
-                        <input type="password" id="senha" pattern="^[a-zA-Z]{8}$" oninput="validarSenha()"
-                            class="input required" required>
-                    </div>
-                    <div class="box-item">
-                        <label for="c_senha">Repita sua senha</label>
-                        <input type="password" name="c_senha" id="c_senha" class="input required"
-                            pattern="^[a-zA-Z]{8}$" required>
-                    </div>
                 </div>
-                <div class="box-item">
+                <div class="input-group">
+                    <label for="sexo">Gênero</label>
+                    <select name="sexo" id="genero">
+                        <option value="s">Selecionar</option>
+                        <option value="m">Masculino</option>
+                        <option value="f">Feminino</option>
+                        <option value="o">Prefiro não informar</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="name_m">Nome materno</label>
+                    <input type="name" id="name_m" required>
+                </div>
+                <div class="input-group">
+                    <label for="tel_cel">Telefone Celular</label>
+                    <input type="tel" class="input required" id="tel_cel" placeholder="(xx) xxxxx-xxxx" required>
+                </div>
+                <div class="input-group">
+                    <label for="tel_fixo">Telefone Fixo</label>
+                    <input type="tel" id="tel_fixo" placeholder="(xx) xxxx-xxxx" class="input required" required>
+
+                </div>
+                <div class="input-group">
+                    <label for="txtCEP">Código postal</label>
+                    <input id="txtCEP" class="input required" oninput="buscaCep()" required>
+                </div>
+                <div class="input-group">
+                    <label for="txtRua">Rua</label>
+                    <input id="txtRua" required disabled>
+
+                </div>
+                <div class="input-group">
+                    <label for="txtNum">Número</label>
+                    <input id="txtNum" required>
+
+                </div>
+                <div class="input-group">
+                    <label for="txtBairro">Bairro</label>
+                    <input id="txtBairro" required disabled>
+
+                </div>
+                <div class="input-group">
+                    <label for="txtCidade">Cidade</label>
+                    <input id="txtCidade" required disabled>
+
+                </div>
+                <div class="input-group">
+                    <label for="txtEstado">Estado</label>
+                    <input id="txtEstado" required disabled>
+                </div>
+                <div class="input-group">
+                    <label for="login">Digite seu login</label>
+                    <input type="text" id="login" class="input required" pattern="^[a-zA-Z]{6}$"
+                        oninput="validarLogin()" required>
+                </div>
+                <div class="input-group">
+                    <label for="senha">Digite sua senha</label>
+                    <input type="password" id="senha" pattern="^[a-zA-Z]{8}$" oninput="validarSenha()"
+                        class="input required" required>
+                </div>
+                <div class="input-group">
+                    <label for="c_senha">Repita sua senha</label>
+                    <input type="password" name="c_senha" id="c_senha" class="input required" pattern="^[a-zA-Z]{8}$"
+                        required>
+                </div>
+
+                <div class="input-group">
                     <input type="submit" value="Registrar" onclick="validarForm()"></input>
                     <div id="resultado" style="color: red;"></div>
                     <div class="form-help">
                         <a href="#">Precisa de ajuda?</a>
                     </div>
                 </div>
-
             </form>
         </div>
-
         <!--
         <small>
             This page is protected by Google reCAPTCHA to ensure you're not a bot. 

@@ -1076,7 +1076,7 @@ section {
 --------------------------------------------------------------*/
 .testimonials {
   padding: 80px 0;
-  background: url("../img/testimonials-bg.jpg") no-repeat;
+  background: url("../img/cell2.jpg") no-repeat;
   background-position: center center;
   background-size: cover;
   position: relative;
@@ -1923,7 +1923,7 @@ section {
 /* ========= Page Login ==========*/
 
 .body {
-    background-color:#09222c;
+    background-color:#0E1D34;
 }
 
 .body::before {
@@ -2093,18 +2093,113 @@ form .form-help :where(label, a) {
 /* ========= END Page Login ==========*/
 
 /* ============= Submit ============= */
-.form-wrap{
+.body-submit{
   display: flex;
-  justify-content: center;
   align-items: center;
-  
-  border-radius: 4px;
-  padding: 70px;
-  width: 500px;
-  transform: translate(-50%, -50%);
-  background: #2AADE5;
-  box-shadow: 0px -0px 7px -1px;
-
+  justify-content: center;
+  padding: 20px;
+  min-height: 100vh;
+}
+.box{
+  display: flex;
+  width: 930px;
+}
+.box{
+    display: flex;
+    width: 100%;
+}
+.img-box{
+    background-color:#0E1D34;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 5px;
+}
+.img-box img{
+    width: 100%;
+}
+.form-box{
+    background-color:#2AADE5;
+    backdrop-filter: blur(40px);
+    padding: 30px 40px;
+    width: 50%;
+    border-radius:5px;
+}
+.form-box h2{
+    font-size: 30px;
+}
+.form-box p{
+    font-weight: bold;
+    color: #ffffff;
+}
+.form-box p a{
+    color: #0E1D34;
+    text-decoration: none;
+}
+.form-box form{
+    margin: 20px 0;
+}
+form .input-group{
+    margin-bottom: 15px;
+}
+form .input-group label{
+    color: #ffffff;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+form .input-group input{
+    width: 100%;
+    height: 47px;
+    background-color: white;
+    border-radius: 5px;
+    outline: none;
+    border: 2px solid transparent;
+    padding: 15px;
+    font-size: 15px;
+    color: #616161;
+    transition: all 0.4s ease;
+}
+form .input-group input:focus{
+    border-color: #000000;
+}
+form .input-group button{
+    width: 100%;
+    height: 47px;
+    background:#09222C;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    margin-top: 15px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    font-size: 16px;
+}
+form .input-group button:hover{
+  background-color: black;
+  transform: scale(1.01);
+}
+form .input-group :disabled{
+  background-color: rgb(211, 203, 203);
+}
+@media (max-width:930px) {
+    .img-box{
+        display: none;
+    }
+    .box{
+        width: 700px;
+    }
+    .form-box{
+        width: 100%;
+        border-radius: 5px;
+    }
+}
+@media (max-width:500px) {
+    .w50{
+        width: 100%;
+        padding: 0;
+    }
 }
 /* =========== End Submit =========== */
 

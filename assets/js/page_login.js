@@ -1,4 +1,5 @@
 //vai comparar o login informado e o do localStorage
+let submit_login = document.getElementById('submit_login')
 
 submit_login.addEventListener("click", function (event) {
     const loginsalvo = localStorage.getItem("login");
@@ -27,9 +28,9 @@ submit_login.addEventListener("click", function (event) {
     }
     if (validarAcessoLogin() && validarAcessoSenha() != false) {
         respost.innerHTML = 'Login efetuado com sucesso! Direcionando para a página inicial...'
-        /*window.location.href = ("home.html");*/
-        bloco_login.style.display = 'none';
-        body_login.style.background = 'white';
+        setTimeout(function() {
+            window.location.href = "index.html"
+        }, 5000);
     }else{
         respost.innerHTML = 'Tudo errado!'
     }
