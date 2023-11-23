@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-/* ACESSIBILIDADE*/
+/* ====== ACESSIBILIDADE=========*/
 let fontSize = 100
 let increaseDecrease= 10
 function aumentarLetra() {

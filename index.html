@@ -9,9 +9,8 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
-  <!--Bootstrap componentes-->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+ <!-- Template Main CSS File -->
+ <link href="/Site-Modavo/assets/css/style.css" rel="stylesheet">
 
   <!-- Favicons -->
   <link href="/Site-Modavo/assets/img/favicon.png" rel="icon">
@@ -24,6 +23,7 @@
     href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
     rel="stylesheet">
 
+    
   <!-- Vendor CSS Files -->
   <link href="/Site-Modavo/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="/Site-Modavo/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -31,20 +31,17 @@
   <link href="/Site-Modavo/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="/Site-Modavo/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="/Site-Modavo/assets/vendor/aos/aos.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="/Site-Modavo/assets/css/main.css" rel="stylesheet">
 </head>
 
 <body>
-  <!-- ======= Acessibilidade ======-->
   <!-- ======= Header ======= -->
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-      </a>
 
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="/Site-Modavo/assets/img/modavo.png" alt="">
+      </a>
+      
       <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
       <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
       <nav id="navbar" class="navbar">
@@ -73,17 +70,13 @@
           <li><a href="#sobrenos">Sobre nós</a></li>
           <li><a href="#contato">Contato</a></li>
           <li><a class="get-a-quote" href="page_login.html">Login</a></li>
-          <li><a class="get-a-quote" href="page_submit.html">Cadastre-se</a></li>  
+          <li><a class="get-a-quote" href="page_submit.html">Cadastre-se</a></li>
         </ul>
-      </nav><!-- .navbar -->
-      <div>
-      <input type="button" value="T+" onclick="aumentarLetra()">
-      <input type="button" value="T-" onclick="diminuirLetra()">
-      </div>
+      </nav>
+      
+      <!-- .navbar -->
     </div>
-
-
-  </header><!-- End Header -->
+  </header>
   <!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
@@ -104,15 +97,6 @@
 
           <button type="button" class="btn btn-success p-2 mt-2" data-aos="fade-up" data-aos-delay="100"
             style="text-transform: uppercase;font-size: 15px;">fale com um especialista ></button>
-
-
-          <!--
-          <form action="#" class="form-search d-flex align-items-stretch mb-3" data-aos="fade-up" data-aos-delay="200">
-            <input type="text" class="form-control" placeholder="ZIP code or CitY">
-            <button type="submit" class="btn btn-primary">Search</button>
-          </form>
-          -->
-
           <div class="row gy-4" data-aos="fade-up" data-aos-delay="400">
 
             <div class="col-lg-3 col-6">
@@ -155,7 +139,7 @@
         </div>
 
         <div class="col-lg-5 order-1 order-lg-2 hero-img" data-aos="zoom-out">
-          <img src="assets/img/cpaasimgcomputer.png" class="img-fluid mb-3 mb-lg-0" alt="">
+          <img src="/Site-Modavo/assets/img/cpaasimgcomputer.png" class="img-fluid mb-3 mb-lg-0" alt="">
         </div>
 
       </div>
@@ -290,16 +274,14 @@
         <div class="section-header">
           <span>Nossos Serviços</span>
           <h2>Nossos Serviços</h2>
-
         </div>
-
         <div class="row gy-4">
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="card">
               <div class="card-img">
                 <img decoding="async" fetchpriority="high" width="475" height="475"
-                  src="https://t147f2.p3cdn1.secureserver.net/wp-content/uploads/2022/06/2fa-image.jpg?time=1698422869"
+                  src="/Site-Modavo/assets/img/2fa-image.jpg"
                   class="img-fluid" alt="">
               </div>
               <h3><a href="service-details.html" class="stretched-link">Autenticação de 2 fatores</a></h3>
@@ -312,7 +294,7 @@
             <div class="card">
               <div class="card-img">
                 <img decoding="async" fetchpriority="high" width="475" height="442"
-                  src="https://t147f2.p3cdn1.secureserver.net/wp-content/uploads/2022/07/numero-mascara.png?time=1698422869"
+                  src="/Site-Modavo/assets/img/numero-mascara.png"
                   class="img-fluid" alt="">
               </div>
               <br>
@@ -339,7 +321,7 @@
             <div class="card">
               <div class="card-img">
                 <img decoding="async" fetchpriority="high" width="1024" height="1024"
-                  src="https://t147f2.p3cdn1.secureserver.net/wp-content/uploads/2023/03/image-2-1024x1024.png"
+                  src="/Site-Modavo/assets/img/smsprogramavel.png"
                   class="img-fluid" alt="">
               </div>
               <h3><a href="service-details.html" class="stretched-link">SMS Programável</a></h3>
@@ -816,7 +798,6 @@
                 class="bi bi-linkedin"></i></a>
           </div>
         </div>
-
         <div class="col-lg-3 col-md-12 footer-links">
           <h4>Menu</h4>
           <ul>
