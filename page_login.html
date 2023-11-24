@@ -35,8 +35,8 @@
 
 </head>
 
-<body class="body">
-  <!-- ======= Header ======= -->
+<body class="body-login">
+  <!-- ======= Header ======= 
   <header id="header" class="header d-flex align-items-center fixed-top bg-">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center">
@@ -44,20 +44,21 @@
       </a>
     </div>
   </header>
-  <!-- End Header -->
-
+   End Header -->
+   <div class="stars"></div>
+   <div class="stars2"></div>
   <div class="form-wrapper">
     <h2>Login</h2>
     <form action="#">
       <div class="form-controle">
-        <input type="text" required>
+        <input type="text" id="c_login" oninput="validarAcessoLogin()" required>
         <label>Digite seu login</label>
       </div>
       <div class="form-controle">
-        <input type="password" required>
+        <input type="password" id="n_senha" oninput="validarAcessoSenha()" required>
         <label>Digite sua senha</label>
       </div>
-      <button type="button" id="submit_login">Acessar</button>
+      <button type="button" onclick="validarAcesso()">Acessar</button>
       <div class="form-help">
         <div class="remember-me">
           <input type="checkbox" id="remember-me">
@@ -67,6 +68,7 @@
       </div>
     </form>
     <p>Novo em Modavo? <a href="page_submit.html"><b>Cadastre-se agora</b></a></p>
+    <div id="resultado"></div>
   </div>
   <div style="display:none;"></div>
   <script src="/assets/js/page_login.js"></script>

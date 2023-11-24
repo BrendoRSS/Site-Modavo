@@ -17,10 +17,14 @@
 </head>
 
 <body class="body-submit">
+    <div class="stars"></div>
+    <div class="stars2"></div>
     <div class="box">
+        <!--
         <div class="img-box">
             <img src="/assets/img/criancas-e-tecnologia.jpg"width="400px" alt="">
         </div>
+        -->
         <div class="form-box">
             <h2>Cadastre-se</h2>
             <p>Já é um membro? <a href="page_login.html">Login</a></p>
@@ -28,7 +32,7 @@
                 <div class="input-group">
                     <label for="name">Digite seu nome</label>
                     <input type="name" id="name" class="input required" oninput="validarNome()"
-                        placeholder="entre 16 e 60 caracteres" pattern="^[a-zA-Z].{16,60}$" required>
+                        placeholder="entre 16 e 60 caracteres alfabéticos" pattern="^[a-zA-Z].{16,60}$" required>
                 </div>
                 <div class="input-group">
                     <label for="nascimento">Data de nascimento</label>
@@ -61,7 +65,8 @@
                 </div>
                 <div class="input-group">
                     <label for="txtCEP">Código postal</label>
-                    <input id="txtCEP" class="input required" oninput="buscaCep()" required>
+                    <input id="txtCEP" class="input required" oninput="buscaCep()" placeholder="apenas números"
+                        required>
                 </div>
                 <div class="input-group">
                     <label for="txtRua">Rua</label>
@@ -90,27 +95,30 @@
                 <div class="input-group">
                     <label for="login">Digite seu login</label>
                     <input type="text" id="login" class="input required" pattern="^[a-zA-Z]{6}$"
-                        oninput="validarLogin()" required>
+                        placeholder="login de 6 caracteres alfabéticos" oninput="validarLogin()" required>
                 </div>
                 <div class="input-group">
                     <label for="senha">Digite sua senha</label>
                     <input type="password" id="senha" pattern="^[a-zA-Z]{8}$" oninput="validarSenha()"
+                        placeholder="senha de 8 dígitos"
+                        oninvalid="setCustomValidity(this.validity.patternMismatch ? 'Quantidade de caracteres maior ou menor' : '')"
                         class="input required" required>
                 </div>
                 <div class="input-group">
                     <label for="c_senha">Repita sua senha</label>
-                    <input type="password" name="c_senha" id="c_senha" class="input required" pattern="^[a-zA-Z]{8}$"
-                        required>
-                </div>
-
-                <div class="input-group">
-                    <input type="submit" value="Registrar" onclick="validarForm()"></input>
-                    <div id="resultado" style="color: red;"></div>
-                    <div class="form-help">
-                        <a href="#">Precisa de ajuda?</a>
-                    </div>
+                    <input type="password" name="c_senha" id="c_senha" class="input required"
+                        placeholder="confirme sua senha"
+                        oninvalid="setCustomValidity(this.validity.patternMismatch ? 'As senhas não coincidem' : '')"
+                        pattern="^[a-zA-Z]{8}$" required>
                 </div>
             </form>
+            <div class="input-group">
+                <button type="submit" onclick="validarForm()">Registrar</button>
+                <div id="resultado" style="color: red;"></div>
+                <div class="form-help">
+                    <a href="#">Precisa de ajuda?</a>
+                </div>
+            </div>
         </div>
         <!--
         <small>
@@ -119,6 +127,7 @@
         </small>
         -->
     </div>
+
     <script src="assets/js/page_submit.js"></script>
 </body>
 
