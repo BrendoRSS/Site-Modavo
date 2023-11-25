@@ -12,12 +12,9 @@ campos[3] = Código Postal
 campos[4] = Login
 campos[5] = Senha
 campos[6] = Confirme Senha
- 
-
-
  */
 
-function validarNome(){
+function validarNome() {
     if (campos[0].value.length < 16 || campos[0].value.length > 60) {
         return false
     }
@@ -28,6 +25,39 @@ function validarNome(){
     }
 }
 
+function formataCPF(cpf) {
+    const elementoAlvo = cpf
+    const cpfAtual = cpf.value
+
+    let cpfAtualizado;
+
+    cpfAtualizado = cpfAtual.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/,
+        function (regex, argumento1, argumento2, argumento3, argumento4) {
+            return argumento1 + '.' + argumento2 + '.' + argumento3 + '-' + argumento4;
+        })
+    elementoAlvo.value = cpfAtualizado;
+}
+
+function mascaraDeTelefone(telefone){
+    const textoAtual = telefone.value;
+    const isCelular = textoAtual.length === 9;
+    let textoAjustado;
+        if(isCelular) {
+         // faz alguma coisa 
+        } else {
+         // faz alguma coisa
+        }
+    telefone.value = textoAjustado;
+}
+
+function tiraHifen(telefone) {
+    const textoAtual = telefone.value;
+    const textoAjustado = textoAtual.replace(/\-/g, '');
+
+    telefone.value = textoAjustado;
+}
+
+
 function validarLogin() {
 
     if (campos[4].value.length == 6) {
@@ -37,7 +67,10 @@ function validarLogin() {
     } else {
         return false
     }
+
 }
+var login = document.getElementById('login')
+localStorage.setItem("login", login)
 
 function validarSenha() {
     let numeros = 0;
@@ -72,9 +105,8 @@ function validarForm() {
     let res = document.getElementById('resultado')
     if (validarNome() && validarLogin() && validarSenha() && validarCSenha() == true) {
         res.innerHTML = 'Cadastro realizado com sucesso! Redirecionando para login...'
-
         //Redireciona o usuário para a página de login após 5 segundos
-        setTimeout(function() {
+        setTimeout(function () {
             window.location.href = "page_login.html"
         }, 5000);
     } else {
@@ -84,9 +116,9 @@ function validarForm() {
 
 // ========= BUSCADOR DE CEP ======= //
 let cep = document.getElementById('txtCEP');
-function buscaCep(){
+function buscaCep() {
     let cep = document.getElementById('txtCEP');
-    if (cep !== ""){
+    if (cep !== "") {
         let url = "https://brasilapi.com.br/api/cep/v1/" + cep.value;
 
         let req = new XMLHttpRequest();
@@ -94,24 +126,24 @@ function buscaCep(){
         req.send();
 
         //tratar a resposta da requisição
-        req.onload = function(){
-            if(req.status === 200){
+        req.onload = function () {
+            if (req.status === 200) {
                 let endereco = JSON.parse(req.response);
 
                 document.getElementById("txtBairro").value = endereco.neighborhood;
                 document.getElementById("txtCidade").value = endereco.city;
                 document.getElementById("txtEstado").value = endereco.state;
                 document.getElementById("txtRua").value = endereco.street;
-            }else if(req.status === 404){
+            } else if (req.status === 404) {
                 alert("CEP inválido")
 
-            }else{
+            } else {
                 alert("Erro ao fazer a requisição")
             }
         }
     }
 }
-window.onload = function(){
+window.onload = function () {
     let txtCep = documento.getElementById("txtCep");
     txtCep.addEventListener("blur", buscaCep)
 }

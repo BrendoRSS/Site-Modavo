@@ -22,7 +22,7 @@ function validarAcessoSenha() {
     }
 }
 function validarAcesso(){
-    if (validarAcessoLogin() && validarAcessoSenha() != false) {
+    if (validarAcessoLogin() && validarAcessoSenha() == true) {
         document.getElementById('resultado').style.color = 'green'  
         document.getElementById('resultado').style.textAlign = 'center'
         document.getElementById('resultado').style.background = 'white'
@@ -36,8 +36,7 @@ function validarAcesso(){
             window.location.href = "index.html"
         }, 5000);
     } else {
-
-        document.getElementById('resultado').style.color = 'red'  
+        document.getElementById('resultado').style.color = 'red' 
         document.getElementById('resultado').style.background = 'white'
         document.getElementById('resultado').style.border = '2px'
         document.getElementById('resultado').style.borderRadius = '5px'   

@@ -1,3 +1,4 @@
+/* ========= Page Inicial ========*/
 /* Fonts */
 :root {
   --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -7,9 +8,17 @@
 
 /* Colors */
 :root {
-  --color-default: #0a0d13;
+  --color-primary: #0E1D34;
+  --color-secondary: #00B7F1;
+  --color-default: #0E1D34;
+  --bgcolor-default: white;
+  
+}
+.escuro {
   --color-primary: #00B7F1;
   --color-secondary: #0e1d34;
+  --color-default: white;
+  --bgcolor-default: #0E1D34;
 }
 
 /* Smooth scroll behavior */
@@ -30,15 +39,20 @@ body {
   font-size: 100%;
 }
 
-a {
+a{
   color: var(--color-primary);
   text-decoration: none;
 }
 
+p{
+  color: var(--color-default)
+}
+
 a:hover {
-  color: #00B7F1;
+  color: var(--color-primary);
   text-decoration: none;
 }
+
 
 h1,
 h2,
@@ -55,6 +69,7 @@ h6 {
 section {
   padding: 80px 0;
   overflow: hidden;
+  background-color: var(--bgcolor-default);
 }
 
 .section-header {
@@ -69,7 +84,7 @@ section {
   text-transform: uppercase;
   margin-bottom: 20px;
   padding-bottom: 0;
-  color: #00B7F1;
+  color: var(--color-primary);
   position: relative;
   z-index: 2;
   margin-bottom: 20px;
@@ -83,7 +98,7 @@ section {
   display: block;
   width: 50px;
   height: 3px;
-  background: var(--color-primary);
+  background: white;
   left: 0;
   right: 0;
   bottom: 0;
@@ -93,7 +108,7 @@ section {
 .section-header span {
   position: absolute;
   top: 46px;
-  color: rgba(14, 29, 52, 0.06);
+  color: white;
   left: 0;
   right: 0;
   z-index: 1;
@@ -107,6 +122,11 @@ section {
   margin-bottom: 0;
   position: relative;
   z-index: 2;
+}
+
+#icon{
+  cursor: pointer;
+  width: 30px;
 }
 
 @media (max-width: 640px) {
@@ -133,7 +153,7 @@ section {
 
 .breadcrumbs .page-header:before {
   content: "";
-  background-color: rgba(14, 29, 52, 0.8);
+  background-color:var(--color-secondary);
   position: absolute;
   inset: 0;
 }
@@ -141,16 +161,16 @@ section {
 .breadcrumbs .page-header h2 {
   font-size: 3.5rem;
   font-weight: 500;
-  color: #fff;
+  color: var(--color-primary);
   font-family: var(--font-secondary);
 }
 
 .breadcrumbs .page-header p {
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--color-secondary);
 }
 
 .breadcrumbs nav {
-  background-color: #f3f6fc;
+  background-color: var(--color-secondary);
   padding: 20px 0;
 }
 
@@ -166,7 +186,7 @@ section {
 }
 
 .breadcrumbs nav ol a {
-  color: var(--color-primary);
+  color: var(--color-secondary);
   transition: 0.3s;
 }
 
@@ -181,7 +201,7 @@ section {
 .breadcrumbs nav ol li+li::before {
   display: inline-block;
   padding-right: 10px;
-  color: #4278cc;
+  color: var(--color-secondary);
   content: "/";
 }
 
@@ -195,7 +215,7 @@ section {
   right: 15px;
   bottom: 15px;
   z-index: 99999;
-  background: var(--color-primary);
+  background: var(--color-secondary);
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -204,13 +224,13 @@ section {
 
 .scroll-top i {
   font-size: 1.5rem;
-  color: #fff;
+  color: white;
   line-height: 0;
 }
 
 .scroll-top:hover {
-  background: #00B7F1;
-  color: #fff;
+  background: var(--color-primary);
+  color: var(--color-secondary);
 }
 
 .scroll-top.active {
@@ -226,7 +246,7 @@ section {
   inset: 0;
   z-index: 9999;
   overflow: hidden;
-  background: #fff;
+  background: var(--color-secondary);
   transition: all 0.6s ease-out;
   width: 100%;
   height: 100vh;
@@ -236,7 +256,7 @@ section {
 #preloader:after {
   content: "";
   position: absolute;
-  border: 4px solid var(--color-primary);
+  border: 4px solid var(--color-secondary);
   border-radius: 50%;
   animation: animate-preloader 2s cubic-bezier(0, 0.2, 0.8, 1) infinite;
 }
@@ -282,7 +302,7 @@ section {
 }
 
 .header.sticked {
-  background: rgba(14, 29, 52, 0.9);
+  background: var(--color-secondary);
   padding: 15px 0;
   box-shadow: 0px 2px 20px rgba(14, 29, 52, 0.1);
 }
@@ -330,7 +350,7 @@ section {
     font-family: var(--font-primary);
     font-size: 1.2rem;
     font-weight: 400;
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--color-default);
     white-space: nowrap;
     transition: 0.3s;
   }
@@ -346,7 +366,8 @@ section {
   .navbar .active,
   .navbar .active:focus,
   .navbar li:hover>a {
-    color: #fff;
+    color: var(--color-default);
+    text-decoration:underline;
   }
 
   .navbar .get-a-quote,
@@ -355,13 +376,13 @@ section {
     padding: 8px 20px;
     margin-left: 30px;
     border-radius: 4px;
-    color: #fff;
+    color: white;
   }
 
   .navbar .get-a-quote:hover,
   .navbar .get-a-quote:focus:hover {
-    color: #fff;
-    background: #00B7F1;
+    color: var(--color-secondary);
+    background: var(--color-primary);
   }
 
   .navbar .dropdown ul {
@@ -374,7 +395,7 @@ section {
     z-index: 99;
     opacity: 0;
     visibility: hidden;
-    background: #fff;
+    background: var(--bgcolor-default);
     box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
     transition: 0.3s;
     border-radius: 4px;
@@ -389,7 +410,7 @@ section {
     font-size: 1rem;
     text-transform: none;
     font-weight: 400;
-    color: var(--color-secondary);
+    color: var(--color-default);
   }
 
   .navbar .dropdown ul a i {
@@ -587,27 +608,27 @@ section {
 }
 
 .featured-services .service-item:hover .icon i {
-  color: var(--color-primary);
+  color: var(--color-default);
 }
 
 .featured-services .service-item .title {
   font-weight: 700;
   margin-bottom: 10px;
   font-size: 1.25rem;
-  color: var(--color-secondary);
+  color: var(--color-default);
   transition: 0.3s;
 }
 
 .featured-services .service-item .description {
   font-size: 1rem;
-  color: #132848;
+  color: var(--color-default);
   margin-bottom: 10px;
 }
 
 .featured-services .service-item .readmore {
   display: flex;
   align-items: center;
-  color: var(--color-secondary);
+  color: #00B7F1 ;
   transition: 0.3s;
   font-weight: 700;
   font-size: 0.875rem;
@@ -1038,7 +1059,7 @@ section {
   font-weight: 600;
   border: 0;
   font-size: 1.125rem;
-  color: var(--color-default);
+  color: var(--color-primary);
   text-align: left;
   background: rgba(14, 29, 52, 0.03);
   border-radius: 5px;
@@ -1403,7 +1424,7 @@ section {
 }
 
 .get-a-quote .php-email-form {
-  background: #f3f6fc;
+  background: var(--color-primary);
   padding: 40px;
   height: 100%;
 }
@@ -1436,7 +1457,7 @@ section {
 
 .get-a-quote .php-email-form .error-message {
   display: none;
-  color: #fff;
+  color: var(--color-primary);
   background: #df1529;
   text-align: left;
   padding: 15px;
@@ -1446,7 +1467,7 @@ section {
 
 .get-a-quote .php-email-form .sent-message {
   display: none;
-  color: #fff;
+  color: var(--color-secondary);
   background: #059652;
   text-align: center;
   padding: 15px;
@@ -1456,7 +1477,7 @@ section {
 
 .get-a-quote .php-email-form .loading {
   display: none;
-  background: #fff;
+  background: var(--color-secondary);
   text-align: center;
   padding: 15px;
   margin-bottom: 24px;
@@ -1470,7 +1491,7 @@ section {
   height: 24px;
   margin: 0 10px -6px 0;
   border: 3px solid #059652;
-  border-top-color: #fff;
+  border-top-color: var(--color-primary);
   animation: animate-loading 1s linear infinite;
 }
 
@@ -1505,7 +1526,7 @@ section {
 }
 
 .get-a-quote .php-email-form button[type=submit]:hover {
-  background: #00B7F1;
+  background: white;
 }
 
 @keyframes animate-loading {
@@ -1528,7 +1549,7 @@ section {
 .contact .info-item i {
   font-size: 1.25rem;
   background: var(--color-primary);
-  color: #fff;
+  color: var(--color-default);
   width: 44px;
   height: 44px;
   display: flex;
@@ -1714,8 +1735,7 @@ section {
 .hero {
   width: 100%;
   min-height: 50vh;
-  background-color: var(--color-secondary);
-  background-image: url("../img/hero-bg.png");
+  background-color: var(--bgcolor-default);
   background-size: cover;
   background-position: center;
   position: relative;
@@ -1728,7 +1748,7 @@ section {
   padding: 0;
   font-size: 3rem;
   font-weight: 700;
-  color: #fff;
+  color: var(--color-default);
 }
 
 @media (max-width: 575px) {
@@ -1744,7 +1764,7 @@ section {
 }
 
 .hero form {
-  background: #fff;
+  background: var(--color-default);
   padding: 10px;
   border-radius: 10px;
 }
@@ -1772,7 +1792,7 @@ section {
 }
 
 .hero form .btn-primary:hover {
-  background-color: #00B7F1;
+  background-color: var(--color-secondary);
 }
 
 .hero .stats-item {
@@ -1795,7 +1815,7 @@ section {
   display: block;
   width: 20px;
   height: 3px;
-  background: var(--color-primary);
+  background: var(--color-secondary);
   left: 0;
   right: 0;
   bottom: 0;
@@ -1924,6 +1944,8 @@ section {
 .footer .credits a {
   color: #fff;
 }
+
+/* ========= END page Inicial ========*/
 
 /* ========= Page Login ==========*/
 
@@ -2093,7 +2115,7 @@ form .form-help :where(label, a) {
 
 /* ========= END Page Login ==========*/
 
-/* ============= Submit ============= */
+/* ============= Page Submit ============= */
 .body-submit {
   background: linear-gradient(0, #2AADE5, #000000);
   height: 100%;
@@ -2138,7 +2160,8 @@ form .form-help :where(label, a) {
     1300px 10px white,
     1300px 10px white,
     1300px 10px white,
-    1300px 10px white;
+    1300px 10px white,
+    1200px 50px white;
   animation: anim-stars 10s linear infinite;
 }
 
@@ -2275,11 +2298,11 @@ form .input-group label {
   margin-bottom: 5px;
 }
 
-form .input-group input {
+form .input-group input, select {
   width: 100%;
   height: 47px;
   background-color: white;
-  border-radius: 5px;
+  border-radius: 10px;
   border: 2px;
   padding: 15px;
   font-size: 15px;
@@ -2335,4 +2358,4 @@ form .input-group :disabled {
   }
 }
 
-/* =========== End Submit =========== */
+/* =========== End Page Submit =========== */

@@ -43,6 +43,7 @@
                 </div>
                 <div class="input-group">
                     <label for="sexo">Gênero</label>
+                    <br>
                     <select name="sexo" id="genero">
                         <option value="s">Selecionar</option>
                         <option value="m">Masculino</option>
@@ -52,15 +53,19 @@
                 </div>
                 <div class="input-group">
                     <label for="name_m">Nome materno</label>
-                    <input type="name" id="name_m" required>
+                    <input type="name" id="name_m" pattern="^[a-zA-Z].{16,60}$" required>
+                </div>
+                <div class="input-group">
+                    <label for="cpf">CPF</label>
+                    <input type="name" id="cpf" placeholder="insira seu CPF (somente números)" onblur="formataCPF(this)" pattern="[0-9]{11}"required>
                 </div>
                 <div class="input-group">
                     <label for="tel_cel">Telefone Celular</label>
-                    <input type="tel" class="input required" id="tel_cel" placeholder="(xx) xxxxx-xxxx" required>
+                    <input type="tel" class="input required" id="tel_cel" minlength="9" pattern="(\(?\d{2}\)?\s)?(\d{4,5}\-\d{4})" onblur="phoneValidate()" placeholder="(xx) xxxxx-xxxx" required>
                 </div>
                 <div class="input-group">
                     <label for="tel_fixo">Telefone Fixo</label>
-                    <input type="tel" id="tel_fixo" placeholder="(xx) xxxx-xxxx" class="input required" required>
+                    <input type="tel" id="tel_fixo" placeholder="(xx) xxxx-xxxx" minlength="8" class="input required" required>
 
                 </div>
                 <div class="input-group">

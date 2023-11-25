@@ -151,8 +151,31 @@ let increaseDecrease= 10
 function aumentarLetra() {
     fontSize = fontSize + increaseDecrease;
         document.body.style.fontSize = fontSize + '%';
+        document.getElementsByTagName(div).fontSize = fontSize + '%';
+        document.getElementsByTagName(h2).fontSize = fontSize + '%';
+        document.getElementsByTagName(p).fontSize = fontSize + '%';
+        document.getElementsByTagName(a).fontSize = fontSize + '%';
+        document.getElementsByTagName(h4).fontSize = fontSize + '%';
+        document.getElementsByTagName(h3).fontSize = fontSize + '%';
 }
 function diminuirLetra() {
     fontSize = fontSize - increaseDecrease;
         document.body.style.fontSize = fontSize + '%';
+        document.getElementsByTagName(div).fontSize = fontSize + '%';
+        document.getElementsByTagName(h2).fontSize = fontSize + '%';
+        document.getElementsByTagName(p).fontSize = fontSize + '%';
+        document.getElementsByTagName(a).fontSize = fontSize + '%';
+        document.getElementsByTagName(h4).fontSize = fontSize + '%';
+        document.getElementsByTagName(h3).fontSize = fontSize + '%';
+}
+
+var icon = document.getElementById('icon');
+icon.onclick = function(){
+  document.body.classList.toggle("escuro");
+  if(document.body.classList.contains("escuro")){
+    icon.src = "../assets/img/icons/sun.webp"
+  }
+  else{
+    icon.src = "../assets/img/icons/lua.png"
+  }
 }
