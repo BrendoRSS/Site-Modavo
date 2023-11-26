@@ -31,6 +31,8 @@ function validarAcesso(){
         document.getElementById('resultado').style.display = 'flex'
         document.getElementById('resultado').style.justifyContent = 'center'   
         document.getElementById('resultado').style.fontSize = '20px';
+
+        localStorage.setItem("loginativo", c_login.value)
         respost.innerHTML = 'Login efetuado com sucesso! Direcionando para a página inicial...'
         setTimeout(function () {
             window.location.href = "index.html"

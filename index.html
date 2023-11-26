@@ -9,11 +9,11 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
- <!-- Template Main CSS File -->
- <link href="/assets/css/style.css" rel="stylesheet">
+  <!-- Template Main CSS File -->
+  <link href="/assets/css/style.css" rel="stylesheet">
 
   <!-- Favicons -->
-  <link href="/assets/img/favicon.png" rel="icon">
+  <link href="/assets/img/icons/favicontelecall.png" rel="icon">
   <link href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -23,7 +23,7 @@
     href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
     rel="stylesheet">
 
-    
+
   <!-- Vendor CSS Files -->
   <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -41,7 +41,7 @@
       <a href="index.html" class="logo d-flex align-items-center">
         <img src="/assets/img/modavo.png" alt="">
       </a>
-      
+
       <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
       <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
       <nav id="navbar" class="navbar">
@@ -67,15 +67,20 @@
               <li><a href="#">SMS Programável</a></li>
             </ul>
           </li>
-          <li><a href="#sobrenos">Sobre nós</a></li>
+          <li><a href="../sobrenos.html">Sobre nós</a></li>
           <li><a href="#contato">Contato</a></li>
           <li><a class="get-a-quote" href="page_login.html">Login</a></li>
           <li><a class="get-a-quote" href="page_submit.html">Cadastre-se</a></li>
         </ul>
-        <button type="button" onclick="aumentarLetra()">T+</button>
-        <button type="button" onclick=" diminuirLetra()">T-</button>
-        <img src="/assets/img/icons/sun.webp" id="icon">
       </nav>
+      <!--
+      <div>
+        <button class="btn" type="button" onclick="aumentarLetra()">T+</button>
+        <button class="btn" type="button" onclick=" diminuirLetra()">T-</button>
+      </div>
+      -->
+      <img src="/assets/img/icons/lua.png" id="icon"> 
+      <div id="login_efetuado"><img src="/assets/img/icons/fotoperfil.png"width="20px" id="fotoperfil" style="display: none;" alt=""></div>
       
       <!-- .navbar -->
     </div>
@@ -96,10 +101,10 @@
           <p data-aos="fade-up" data-aos-delay="100">Nossa API permite que as empresas expandam suas ofertas sem a
             necessidade de hardware ou software adicional.</p>
           <button type="button" class="btn btn-primary p-2" data-aos="fade-up" data-aos-delay="100"
-            style="text-transform: uppercase;font-size: 15px;">faça um teste grátis ></button>
+            style="text-transform: uppercase;font-size: 15px; color:white">faça um teste grátis ></button>
 
           <button type="button" class="btn btn-success p-2 mt-2" data-aos="fade-up" data-aos-delay="100"
-            style="text-transform: uppercase;font-size: 15px;">fale com um especialista ></button>
+            style="text-transform: uppercase;font-size: 15px;color:white">fale com um especialista ></button>
           <div class="row gy-4" data-aos="fade-up" data-aos-delay="400">
 
             <div class="col-lg-3 col-6">
@@ -283,8 +288,7 @@
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="card">
               <div class="card-img">
-                <img decoding="async" fetchpriority="high" width="475" height="475"
-                  src="/assets/img/2fa-image.jpg"
+                <img decoding="async" fetchpriority="high" width="475" height="475" src="/assets/img/2fa-image.jpg"
                   class="img-fluid" alt="">
               </div>
               <h3><a href="service-details.html" class="stretched-link">Autenticação de 2 fatores</a></h3>
@@ -296,8 +300,7 @@
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="card">
               <div class="card-img">
-                <img decoding="async" fetchpriority="high" width="475" height="442"
-                  src="/assets/img/numero-mascara.png"
+                <img decoding="async" fetchpriority="high" width="475" height="442" src="/assets/img/numero-mascara.png"
                   class="img-fluid" alt="">
               </div>
               <br>
@@ -324,8 +327,7 @@
             <div class="card">
               <div class="card-img">
                 <img decoding="async" fetchpriority="high" width="1024" height="1024"
-                  src="/assets/img/smsprogramavel.png"
-                  class="img-fluid" alt="">
+                  src="/assets/img/smsprogramavel.png" class="img-fluid" alt="">
               </div>
               <h3><a href="service-details.html" class="stretched-link">SMS Programável</a></h3>
               <p>Com essa ferramenta você envia mensagens de SMS com
@@ -367,9 +369,9 @@
                   seus resultados.</p>
             </ul>
             <button type="button" class="btn btn-primary p-2" data-aos="fade-up" data-aos-delay="100"
-              style="text-transform: uppercase;font-size: 15px;">faça um teste grátis ></button>
+              style="text-transform: uppercase;font-size: 15px;color:white;">faça um teste grátis ></button>
             <button type="button" class="btn btn-success p-2" data-aos="fade-up" data-aos-delay="100"
-              style="text-transform: uppercase;font-size: 15px;">fale com um especialista ></button>
+              style="text-transform: uppercase;font-size: 15px;color:white;">fale com um especialista ></button>
           </div>
         </div>
       </div>
@@ -585,7 +587,8 @@
                 </div>
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  Comprei o serviço de 2FA para minha startup e estou surpreso com a segurança, indico completamente a Modavo!
+                  Comprei o serviço de 2FA para minha startup e estou surpreso com a segurança, indico completamente a
+                  Modavo!
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
@@ -602,7 +605,8 @@
                 </div>
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  Contratei o serviço de Número máscara para fazer alguns testes para meus clientes de design e está servindo muito, indico super!
+                  Contratei o serviço de Número máscara para fazer alguns testes para meus clientes de design e está
+                  servindo muito, indico super!
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
@@ -619,7 +623,8 @@
                 </div>
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  Comprei o serviço de Google Verifield Calls e agora consigo metrificar com detalhes a chamada que recebo, muito bom, indico MODAVO!!
+                  Comprei o serviço de Google Verifield Calls e agora consigo metrificar com detalhes a chamada que
+                  recebo, muito bom, indico MODAVO!!
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
@@ -636,7 +641,8 @@
                 </div>
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  Com essa solução de SMS programável, consigo fazer disparos de sms para meus clientes e fazer propostas de vendas de produtos quando quero, ferramenta magnífica!
+                  Com essa solução de SMS programável, consigo fazer disparos de sms para meus clientes e fazer
+                  propostas de vendas de produtos quando quero, ferramenta magnífica!
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
@@ -653,7 +659,8 @@
                 </div>
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  Estou maravilhado com todas as ferramentas que a Modavo disponibiliza e sua entrega de qualidade, simplesmente magníficos!!
+                  Estou maravilhado com todas as ferramentas que a Modavo disponibiliza e sua entrega de qualidade,
+                  simplesmente magníficos!!
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
@@ -842,6 +849,7 @@
   <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="/assets/vendor/aos/aos.js"></script>
   <script src="/assets/vendor/php-email-form/validate.js"></script>
+  <script src="/assets/js/page_login.js"></script>
 
   <!-- Template Main JS File -->
   <script src="/assets/js/main.js"></script>

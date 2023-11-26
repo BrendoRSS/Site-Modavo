@@ -38,18 +38,6 @@ function formataCPF(cpf) {
     elementoAlvo.value = cpfAtualizado;
 }
 
-function mascaraDeTelefone(telefone){
-    const textoAtual = telefone.value;
-    const isCelular = textoAtual.length === 9;
-    let textoAjustado;
-        if(isCelular) {
-         // faz alguma coisa 
-        } else {
-         // faz alguma coisa
-        }
-    telefone.value = textoAjustado;
-}
-
 function tiraHifen(telefone) {
     const textoAtual = telefone.value;
     const textoAjustado = textoAtual.replace(/\-/g, '');
@@ -100,16 +88,39 @@ function validarCSenha() {
         return false
     }
 }
+
+const forms = document.getElementById('form')
+forms.addEventListener("submit", function (event) {        
+        // Impede o comportamento padrão de envio do formulário         
+        event.preventDefault();         
+        // Chama a função para validar o formulário         
+        validarForm();     
+})
+
 //Valida se todo o forms foi cadastrado corretamente
 function validarForm() {
     let res = document.getElementById('resultado')
     if (validarNome() && validarLogin() && validarSenha() && validarCSenha() == true) {
-        res.innerHTML = 'Cadastro realizado com sucesso! Redirecionando para login...'
-        //Redireciona o usuário para a página de login após 5 segundos
+        document.getElementById('resultado').style.color = 'green'  
+        document.getElementById('resultado').style.textAlign = 'center'
+        document.getElementById('resultado').style.background = 'white'
+        document.getElementById('resultado').style.border = '2px'
+        document.getElementById('resultado').style.borderRadius = '5px'   
+        document.getElementById('resultado').style.display = 'flex'
+        document.getElementById('resultado').style.justifyContent = 'center'   
+        document.getElementById('resultado').style.fontSize = '20px';
+        res.innerHTML = 'Cadastro Realizado! Direcionando para a página de login...'
         setTimeout(function () {
-            window.location.href = "page_login.html"
+            window.location.href = "../page_login.html"
         }, 5000);
     } else {
+        document.getElementById('resultado').style.color = 'red' 
+        document.getElementById('resultado').style.background = 'white'
+        document.getElementById('resultado').style.border = '2px'
+        document.getElementById('resultado').style.borderRadius = '5px'   
+        document.getElementById('resultado').style.display = 'flex'
+        document.getElementById('resultado').style.justifyContent = 'center'   
+        document.getElementById('resultado').style.fontSize = '20px';
         res.innerHTML = '[ERROR404] - Avalie as informações cadastradas'
     }
 }

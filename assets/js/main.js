@@ -144,19 +144,36 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
+/* ====== LOGIN NAS PÁGINAS =====*/
+function loginAtivo (){
+  var loginefetuado = document.getElementById('login_efetuado')
+  loginefetuado.style.background = 'var(--color-bgdefault)'
+  loginefetuado.style.border = '2px'
+  loginefetuado.style.borderRadius = '5px'     
+  loginefetuado.style.fontSize = '15px';
+  loginefetuado.style.display = 'flex';
+  loginefetuado.style.alignItems = 'center';
+    
+  if(localStorage.getItem("loginativo") == null){
 
+  }else{
+
+    loginefetuado.innerHTML += `<p> Usuário:
+    ${localStorage.getItem("loginativo")}</p>`
+    
+  }
+  
+}
+loginAtivo()
 /* ====== ACESSIBILIDADE=========*/
+
+/* ==================== fontSize ================== */
 let fontSize = 100
 let increaseDecrease= 10
+let text = document.getElementsByClassName('text')
 function aumentarLetra() {
     fontSize = fontSize + increaseDecrease;
         document.body.style.fontSize = fontSize + '%';
-        document.getElementsByTagName(div).fontSize = fontSize + '%';
-        document.getElementsByTagName(h2).fontSize = fontSize + '%';
-        document.getElementsByTagName(p).fontSize = fontSize + '%';
-        document.getElementsByTagName(a).fontSize = fontSize + '%';
-        document.getElementsByTagName(h4).fontSize = fontSize + '%';
-        document.getElementsByTagName(h3).fontSize = fontSize + '%';
 }
 function diminuirLetra() {
     fontSize = fontSize - increaseDecrease;
@@ -168,7 +185,8 @@ function diminuirLetra() {
         document.getElementsByTagName(h4).fontSize = fontSize + '%';
         document.getElementsByTagName(h3).fontSize = fontSize + '%';
 }
-
+/* ==================== END fontSize ================== */
+/* ==================== MODO DARK ======================*/
 var icon = document.getElementById('icon');
 icon.onclick = function(){
   document.body.classList.toggle("escuro");
@@ -179,3 +197,5 @@ icon.onclick = function(){
     icon.src = "../assets/img/icons/lua.png"
   }
 }
+
+/* ================== END MODO DARK ====================*/
