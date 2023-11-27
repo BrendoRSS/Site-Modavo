@@ -119,9 +119,9 @@ section {
   z-index: 2;
 }
 
-#icon{
+#iconetrocarcor{
   cursor: pointer;
-  width: 30px;
+  width: 40px;
 }
 
 @media (max-width: 640px) {

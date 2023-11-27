@@ -146,19 +146,21 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 /* ====== LOGIN NAS PÁGINAS =====*/
 function loginAtivo (){
-  var loginefetuado = document.getElementById('login_efetuado')
-  loginefetuado.style.background = 'var(--color-bgdefault)'
-  loginefetuado.style.border = '2px'
+  const buttonlogin = document.getElementById('buttonlogin')
+  const buttoncadastro = document.getElementById('buttoncadastro')
+  const loginefetuado = document.querySelector('#login_efetuado')
   loginefetuado.style.borderRadius = '5px'     
   loginefetuado.style.fontSize = '15px';
+  loginefetuado.style.fontfamily = 'arial';
   loginefetuado.style.display = 'flex';
   loginefetuado.style.alignItems = 'center';
     
   if(localStorage.getItem("loginativo") == null){
 
   }else{
-
-    loginefetuado.innerHTML += `<p> Usuário:
+    buttonlogin.style.display = 'none'
+    buttoncadastro.style.display = 'none'
+    loginefetuado.innerHTML += `<p> Bem vindo,
     ${localStorage.getItem("loginativo")}</p>`
     
   }
@@ -167,35 +169,19 @@ function loginAtivo (){
 loginAtivo()
 /* ====== ACESSIBILIDADE=========*/
 
-/* ==================== fontSize ================== */
-let fontSize = 100
-let increaseDecrease= 10
-let text = document.getElementsByClassName('text')
-function aumentarLetra() {
-    fontSize = fontSize + increaseDecrease;
-        document.body.style.fontSize = fontSize + '%';
-}
-function diminuirLetra() {
-    fontSize = fontSize - increaseDecrease;
-        document.body.style.fontSize = fontSize + '%';
-        document.getElementsByTagName(div).fontSize = fontSize + '%';
-        document.getElementsByTagName(h2).fontSize = fontSize + '%';
-        document.getElementsByTagName(p).fontSize = fontSize + '%';
-        document.getElementsByTagName(a).fontSize = fontSize + '%';
-        document.getElementsByTagName(h4).fontSize = fontSize + '%';
-        document.getElementsByTagName(h3).fontSize = fontSize + '%';
-}
-/* ==================== END fontSize ================== */
 /* ==================== MODO DARK ======================*/
-var icon = document.getElementById('icon');
+
+function mododark(){
+
+var icon = document.getElementById('iconetrocarcor');
 icon.onclick = function(){
   document.body.classList.toggle("escuro");
   if(document.body.classList.contains("escuro")){
-    icon.src = "../assets/img/icons/sun.webp"
+    icon.src = "../assets/img/icons/sun.webp";
   }
   else{
     icon.src = "../assets/img/icons/lua.png"
   }
-}
+}}
 
 /* ================== END MODO DARK ====================*/

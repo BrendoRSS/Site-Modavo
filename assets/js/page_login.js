@@ -39,13 +39,13 @@ function validarAcesso(){
         }, 5000);
     } else {
         document.getElementById('resultado').style.color = 'red' 
-        document.getElementById('resultado').style.background = 'white'
+        document.getElementById('resultado').style.background = '#0E1D34'
         document.getElementById('resultado').style.border = '2px'
         document.getElementById('resultado').style.borderRadius = '5px'   
         document.getElementById('resultado').style.display = 'flex'
         document.getElementById('resultado').style.justifyContent = 'center'   
         document.getElementById('resultado').style.fontSize = '20px';
-        respost.innerHTML = 'Tudo errado!'
+        respost.innerHTML = 'Login ou senha incorretos!'
     }
     
 }

@@ -14,6 +14,7 @@ campos[5] = Senha
 campos[6] = Confirme Senha
  */
 
+//valida o nome
 function validarNome() {
     if (campos[0].value.length < 16 || campos[0].value.length > 60) {
         return false
@@ -24,7 +25,7 @@ function validarNome() {
         return true
     }
 }
-
+// formata o CPF de acordo com a norma padrão
 function formataCPF(cpf) {
     const elementoAlvo = cpf
     const cpfAtual = cpf.value
@@ -37,15 +38,7 @@ function formataCPF(cpf) {
         })
     elementoAlvo.value = cpfAtualizado;
 }
-
-function tiraHifen(telefone) {
-    const textoAtual = telefone.value;
-    const textoAjustado = textoAtual.replace(/\-/g, '');
-
-    telefone.value = textoAjustado;
-}
-
-
+// valida o login
 function validarLogin() {
 
     if (campos[4].value.length == 6) {
@@ -57,18 +50,19 @@ function validarLogin() {
     }
 
 }
-var login = document.getElementById('login')
-localStorage.setItem("login", login)
-
+//valida a senha
 function validarSenha() {
     let numeros = 0;
     if (campos[5].value.length == 8) {
         numeros = 0
+
+        //Esse "for" analisa cada elemento da senha digitada e verifica se possui numeração
         for (i = 0; i <= 9; i++) {
             if (campos[5].value.indexOf(Number(i)) != -1) {
                 numeros = numeros + 1
             }
         }
+        //se tiver número ele retorna falso
         if (numeros > 0) {
             return false
         } else {
@@ -80,7 +74,7 @@ function validarSenha() {
         return false
     }
 }
-
+//valida a confirmação de senha
 function validarCSenha() {
     if (campos[5].value == campos[6].value) {
         return true
@@ -101,9 +95,9 @@ forms.addEventListener("submit", function (event) {
 function validarForm() {
     let res = document.getElementById('resultado')
     if (validarNome() && validarLogin() && validarSenha() && validarCSenha() == true) {
-        document.getElementById('resultado').style.color = 'green'  
+        document.getElementById('resultado').style.color = 'white'  
         document.getElementById('resultado').style.textAlign = 'center'
-        document.getElementById('resultado').style.background = 'white'
+        document.getElementById('resultado').style.background = '#0E1D34'
         document.getElementById('resultado').style.border = '2px'
         document.getElementById('resultado').style.borderRadius = '5px'   
         document.getElementById('resultado').style.display = 'flex'
@@ -115,7 +109,7 @@ function validarForm() {
         }, 5000);
     } else {
         document.getElementById('resultado').style.color = 'red' 
-        document.getElementById('resultado').style.background = 'white'
+        document.getElementById('resultado').style.background = '#0E1D34'
         document.getElementById('resultado').style.border = '2px'
         document.getElementById('resultado').style.borderRadius = '5px'   
         document.getElementById('resultado').style.display = 'flex'
@@ -145,18 +139,9 @@ function buscaCep() {
                 document.getElementById("txtCidade").value = endereco.city;
                 document.getElementById("txtEstado").value = endereco.state;
                 document.getElementById("txtRua").value = endereco.street;
-            } else if (req.status === 404) {
-                alert("CEP inválido")
-
-            } else {
-                alert("Erro ao fazer a requisição")
             }
         }
     }
-}
-window.onload = function () {
-    let txtCep = documento.getElementById("txtCep");
-    txtCep.addEventListener("blur", buscaCep)
 }
 
 
